@@ -1,6 +1,7 @@
 ---
 layout: post
-category : lessons
+title: About liblinear
+category : machine learning
 tags : [liblinear, logistic regression, 机器学习]
 ---
 {% include JB/setup %}

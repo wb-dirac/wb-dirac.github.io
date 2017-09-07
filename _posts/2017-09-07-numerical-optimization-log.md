@@ -1,6 +1,7 @@
 ---
 layout: post
-category : lessons
+title: 无限制优化基础
+category :numerical optimization 
 tags : [优化, 线搜索法]
 ---
 {% include JB/setup %}
