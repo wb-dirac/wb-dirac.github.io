@@ -1,7 +1,6 @@
 ---
 layout: post
 category : lessons
-tagline: "Supporting tagline"
 tags : [liblinear, logistic regression, 机器学习]
 ---
 {% include JB/setup %}
