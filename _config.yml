@@ -1,1 +1,2 @@
 theme: jekyll-theme-slate
+sudo gem install kramdown
