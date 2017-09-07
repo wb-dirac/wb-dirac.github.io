@@ -1,7 +1,6 @@
 ---
 layout: post
 category : lessons
-tagline: "Supporting tagline"
 tags : [优化, 线搜索法]
 ---
 {% include JB/setup %}
