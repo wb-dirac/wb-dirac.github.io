@@ -1,7 +1,10 @@
 ---
-layout: default
-title: numberical optimazation
+layout: post
+category : lessons
+tagline: "Supporting tagline"
+tags : [优化, 线搜索法]
 ---
+{% include JB/setup %}
 
 # 第二章,无限制优化基础
 两种方法迭代方法.
