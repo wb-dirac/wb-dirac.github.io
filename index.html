@@ -10,7 +10,7 @@ tagline: About physics, machine learning, mathematics and any others
 　　<ul>
 　　　　{% for post in site.posts %}
 　　　　　　<li>
-            {{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <h3>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.excerpt }} ...</p>
           </li>
 　　　　{% endfor %}
