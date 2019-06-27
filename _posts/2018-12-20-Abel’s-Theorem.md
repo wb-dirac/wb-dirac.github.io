@@ -6,20 +6,20 @@ tags : [阿贝尔定理]
 ---
 {% include JB/setup %}
 
-#Abel’s Theorem in Problems and Solutions
-##基于阿诺德教授的讲义
+# Abel’s Theorem in Problems and Solutions
+## 基于阿诺德教授的讲义
 ### V.B. Alekseev
 
 Moscow State University,
 
 Moscow, Russia
-
-##目录
-###阿诺德英文版序言
-###序言
-###导引
+<!-- excerpt -->
+## 目录
+### 阿诺德英文版序言
+### 序言
+### 导引
 ### 1 群
--1.1 例子  
+1.1 例子  
 1.2 变换群  
 1.3 群  
 1.4 循环群  
