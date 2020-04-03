@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Abel’s Theorem in Problems and Solutions
+title: 方形勢波动方程
 category : 数学物理
 tags : [量子理论]
 ---
