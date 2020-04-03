@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 方形勢波动方程
+title: Bohm-量子理论-方形勢波动方程
 category : 数学物理
 tags : [量子理论]
 ---
