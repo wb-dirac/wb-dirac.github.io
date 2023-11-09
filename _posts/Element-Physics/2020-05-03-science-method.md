@@ -4,7 +4,6 @@ title: 第一节-科学认知过程
 category : 数学物理
 tags : [基础物理,科学,认知过程]
 ---
-{% include JB/setup %}
 
 # 因缺思厅-物理学
 ## 第零节 引言
