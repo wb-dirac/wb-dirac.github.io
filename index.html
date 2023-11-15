@@ -25,7 +25,9 @@ tagline: About physics, machine learning, mathematics and any others
   .then(module => module.instance())
   .then(viz => {
     let vizOutPut = document.getElementById("output");
-    vizOutPut.appendChild(viz.renderSVGElement(vizOutPut.innerText));
+    let dotText = vizOutPut.innerText;
+    vizOutPut.innerText = '';
+    vizOutPut.appendChild(viz.renderSVGElement());
     vizOutPut.hidden = false;
     renderSentenceNetData(viz, initData)
   });
