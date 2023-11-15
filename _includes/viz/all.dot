@@ -1,0 +1,13 @@
+
+digraph {
+    rankdir="BT"
+    node [shape=polygon sides=4 distortion=0.0 orientation=0.0 skew=0.0 color=white style=filled fontname="Helvetica-Outline"]
+        p138 [id=p138 label="公设1" href="/欧式几何/2023/11/14/公设1"]
+        p139 [id=p139 label="公设2" href="/欧式几何/2023/11/14/公设2"]
+        p140 [id=p140 label="公设3" href="/欧式几何/2023/11/14/公设3"]
+        p141 [id=p141 label="公设4" href="/欧式几何/2023/11/14/公设4"]
+        p142 [id=p142 label="公设5" href="/欧式几何/2023/11/14/公设5"]
+        p143 [id=p143 label="作正三角形" href="/欧式几何/2023/11/14/作正三角形"]
+                                                                                    p138->p143 [color="#00ff00"]
+                p140->p143 [color="#00ff00"]
+            }

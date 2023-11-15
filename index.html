@@ -6,8 +6,8 @@ tagline: About physics, machine learning, mathematics and any others
 {% include JB/setup %}
 
 　　<h2>{{ page.title }}</h2>
-<div id="net">
-  {% include viz/all.svg %}
+<div id="output" hidden>
+  {% include viz/all.dot %}
 </div>
 　　<p>最新文章</p>
 　　<ul>
@@ -18,3 +18,16 @@ tagline: About physics, machine learning, mathematics and any others
           </li>
 　　　　{% endfor %}
 　　</ul>
+
+<script>
+    //渲染
+    import("{{ ASSET_PATH }}/viz/viz-standalone-4f267b9b.js")
+  .then(module => module.instance())
+  .then(viz => {
+    let vizOutPut = document.getElementById("output");
+    vizOutPut.appendChild(viz.renderSVGElement(vizOutPut.innerText));
+    vizOutPut.hidden = false;
+    renderSentenceNetData(viz, initData)
+  });
+
+</script>
