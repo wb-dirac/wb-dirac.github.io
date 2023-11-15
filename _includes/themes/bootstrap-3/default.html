@@ -6,7 +6,7 @@
 
     <title>{{ page.title }}</title>
     {% if page.tags.first[0] == null %}
-    <meta name="keywords" content="{% for tag in page.tags %}{{ tag }},{% endfor %}">
+    <meta name="keywords" content="{% for tag in page.tags %}{{ tag }},{% endfor %}{% if page.category %}{{ page.category }}{% endif %}">
     {% else %}
     <meta name="keywords" content="{% for tag in page.tags %}{{ tag[0] }},{% endfor %}">
     {% endif %}
