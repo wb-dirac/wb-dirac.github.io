@@ -27,7 +27,7 @@ tagline: About physics, machine learning, mathematics and any others
     let vizOutPut = document.getElementById("output");
     let dotText = vizOutPut.innerText;
     vizOutPut.innerText = '';
-    vizOutPut.appendChild(viz.renderSVGElement());
+    vizOutPut.appendChild(viz.renderSVGElement(dotText));
     vizOutPut.hidden = false;
     renderSentenceNetData(viz, initData)
   });
