@@ -3,6 +3,18 @@
       width: 100%;
       height: 250px;
   }
+  .inline-animation {
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #f9f9f9;
+  }
+  .inline-animation canvas {
+      max-width: 100%;
+      height: auto;
+  }
 </style>
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
@@ -14,10 +26,15 @@
       <span>{{ page.date | date_to_long_string }}</span>
       <span id="busuanzi_container_site_pv">文章阅读次数<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
+    
+    <!-- 主要动画演示区（保留原有功能） -->
+    {% if page.has_main_animation %}
     <div>
       <h3>动画演示区</h3>
       <canvas id="myCanvas" resize></canvas>
     </div>
+    {% endif %}
+    
     <div class="content">
       {{ content }}
     </div>
@@ -62,8 +79,41 @@
 <!-- Define inlined PaperScript associate it with myCanvas -->
 <script>
     // paper.install(window);//此行与livewire.js冲突
-    var canvas = document.getElementById('myCanvas');
-    paper.setup(canvas);
+    if (document.getElementById('myCanvas')) {
+        var canvas = document.getElementById('myCanvas');
+        paper.setup(canvas);
+    }
 </script>
 
+<!-- 主要动画脚本 -->
+{% if page.has_main_animation %}
 <script type="module" src="{{ ASSET_PATH }}/animation/{{ page.title }}.js"></script>
+{% endif %}
+
+<!-- 内联动画支持 -->
+<script>
+// 初始化所有内联动画
+document.addEventListener('DOMContentLoaded', function() {
+    const inlineAnimations = document.querySelectorAll('.inline-animation');
+    inlineAnimations.forEach(function(container) {
+        const canvas = container.querySelector('canvas');
+        if (canvas && typeof paper !== 'undefined') {
+            // 为每个canvas创建独立的Paper.js作用域
+            const scope = new paper.PaperScope();
+            scope.setup(canvas);
+            
+            // 加载对应的动画脚本
+            const animationName = container.dataset.animation;
+            if (animationName) {
+                import(`{{ ASSET_PATH }}/animation/inline/${animationName}.js`)
+                    .then(module => {
+                        if (module.default) {
+                            module.default(scope);
+                        }
+                    })
+                    .catch(err => console.log('Animation not found:', animationName));
+            }
+        }
+    });
+});
+</script> 

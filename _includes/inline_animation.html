@@ -1,0 +1,6 @@
+<div class="inline-animation" data-animation="{{ include.name }}">
+  <canvas id="canvas-{{ include.name }}" width="{{ include.width | default: 400 }}" height="{{ include.height | default: 300 }}"></canvas>
+  {% if include.caption %}
+  <p class="animation-caption">{{ include.caption }}</p>
+  {% endif %}
+</div> 
