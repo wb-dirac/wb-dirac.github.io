@@ -13,7 +13,7 @@
 - Layouts: `_layouts/`
 - Includes: `_includes/`
 - Assets: `/assets/`
-- Google site verification: meta tag in index.html head
+- Google site verification: meta tag in _includes/themes/bootstrap-3/default.html head
 
 ## Deployment
 - GitHub Pages: Push to `main` branch
